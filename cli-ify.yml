@@ -1,0 +1,13 @@
+options:
+  - test:
+      alias: t
+      description: A test as an option
+      type: string
+      required: true
+      module: test.js
+  - read:
+      alias: r
+      description: read things
+      type: boolean
+      required: false
+      module: read.js

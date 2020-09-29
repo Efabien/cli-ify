@@ -1,0 +1,28 @@
+{
+  "name": "cli-ify",
+  "version": "1.0.0",
+  "description": "A framework for building cli with node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Efabien/cli-ify.git"
+  },
+  "keywords": [
+    "cli",
+    "framework"
+  ],
+  "author": "Efabien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Efabien/cli-ify/issues"
+  },
+  "homepage": "https://github.com/Efabien/cli-ify#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "js-yaml": "^3.14.0",
+    "yargs-interactive": "^3.0.0"
+  }
+}
