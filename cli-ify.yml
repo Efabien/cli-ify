@@ -1,13 +1,13 @@
-options:
-  - test:
-      alias: t
-      description: A test as an option
-      type: string
-      required: true
-      module: test.js
+commands:
+  - name:
+      describe: Get the name
+      module: name.js
+      argv: full
   - read:
-      alias: r
-      description: read things
-      type: boolean
-      required: false
+      describe: Read input
       module: read.js
+options:
+  - verbose:
+      alias: v
+      type: boolean
+      description: show details
