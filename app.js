@@ -1,16 +1,19 @@
-const { options } = require('./config');
-const yargs = require('yargs-interactive');
+const { commands, options } = require('./config');
+const yargs = require('yargs');
 
-const run = (options) => {
-  options.reduce((yargs, current) => {
-    yargs.option(
-      
-    )
-  }, yargs);
+const {
+  registerCommands, 
+  registerOptions
+} = require('./utils/init-yargs');
+
+const run = (commands, options) => {
+  registerCommands(commands, yargs);
+  registerOptions(options, yargs);
+  yargs.argv;
 };
 
 try {
-  run(options);
+  run(commands, options);
 } catch (e) {
   console.log(e);
-}
+};
