@@ -1,3 +1,4 @@
+const logger = require('../lib/logger');
 module.exports = (argv) => {
-  console.log(argv)
+  logger.data(argv);
 };

@@ -4,7 +4,7 @@ const yargs = require('yargs');
 const {
   registerCommands, 
   registerOptions
-} = require('./utils/init-yargs');
+} = require('./lib/init-yargs');
 
 const run = (commands, options) => {
   registerCommands(commands, yargs);
