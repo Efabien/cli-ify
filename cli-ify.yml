@@ -6,6 +6,7 @@ commands:
   - read:
       describe: Read input
       module: read.js
+      progress: true
 options:
   - verbose:
       alias: v

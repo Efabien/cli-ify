@@ -12,8 +12,4 @@ const run = (commands, options) => {
   yargs.argv;
 };
 
-try {
-  run(commands, options);
-} catch (e) {
-  console.log(e);
-};
+run(commands, options);
