@@ -1,3 +1,7 @@
+settings:
+  interactivity:
+    label: ' '
+    delimiter: ' '
 commands:
   - name:
       describe: Get the name
@@ -7,6 +11,14 @@ commands:
       describe: Read input
       module: read.js
       progress: true
+  - prt:
+      describe: Test user input
+      module: prompt.js
+      prompts:
+        - email:
+            description: What is your email ?
+        - userName:
+            description: What is your user name ?
 options:
   - verbose:
       alias: v
