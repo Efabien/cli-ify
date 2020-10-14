@@ -1,4 +1,8 @@
-const { commands, options } = require('./config');
+const {
+  commands,
+  options,
+  settings
+} = require('./config');
 const yargs = require('yargs');
 
 const {
@@ -6,10 +10,10 @@ const {
   registerOptions
 } = require('./lib/init-yargs');
 
-const run = (commands, options) => {
-  registerCommands(commands, yargs);
-  registerOptions(options, yargs);
+const run = (commands, options, settings) => {
+  registerCommands(commands, yargs, settings);
+  registerOptions(options, yargs, settings);
   yargs.argv;
 };
 
-run(commands, options);
+run(commands, options, settings);
