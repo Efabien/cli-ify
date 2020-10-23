@@ -14,17 +14,17 @@ settings:
     label: ' '
     delimiter: ' '
 commands:
-  - name:
-      describe: Get the name
-      module: name.js
-      argv: full
-  - read:
-      describe: Read input
-      module: read.js
+  - ex1:
+      describe: An example of command with an argument myArgv
+      module: ex1.js
+      argv: myArgv
+  - ex2:
+      describe: An example of task with a progress bar
+      module: ex2.js
       progress: true
-  - prt:
-      describe: Test user input
-      module: prompt.js
+  - ex3:
+      describe: An example of task with interaction
+      module: ex3.js
       prompts:
         - email:
             description: What is your email ?
