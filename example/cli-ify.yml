@@ -1,30 +1,15 @@
 settings:
-  theme:
-    silly: rainbow
-    input: grey
-    verbose: blue
-    prompt: cyan
-    info: green
-    data: grey
-    help: cyan
-    warn: yellow
-    debug: blue
-    error: red
   interactivity:
     label: ' '
     delimiter: ' '
 commands:
   - ex1:
       describe: An example of command with an argument myArgv
-      module: ex1.js
+      module: ./modules/ex1.js
       argv: myArgv
   - ex2:
-      describe: An example of task with a progress bar
-      module: ex2.js
-      progress: true
-  - ex3:
       describe: An example of task with interaction
-      module: ex3.js
+      module: ./modules/ex2.js
       prompts:
         - email:
             description: What is your email ?

@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Efabien/cli-ify#readme",
   "dependencies": {
-    "cli-progress": "^3.8.2",
+    "callsite": "^1.0.0",
     "colors": "^1.4.0",
     "js-yaml": "^3.14.0",
     "lodash": "^4.17.20",
