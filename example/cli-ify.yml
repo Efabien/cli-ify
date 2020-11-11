@@ -2,6 +2,17 @@ settings:
   interactivity:
     label: ' '
     delimiter: ' '
+  theme:
+    silly: rainbow
+    input: grey
+    verbose: blue
+    prompt: cyan
+    info: green
+    data: grey
+    help: cyan
+    warn: yellow
+    debug: blue
+    error: red
 commands:
   - ex1:
       describe: An example of command with an argument myArgv
