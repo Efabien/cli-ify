@@ -20,19 +20,19 @@ class CliIfy {
     this._execDir;
   }
 
-  init(configPath) {
+  init({ manifest, dependencies }) {
     this._setExecDir();
     const {
       commands,
       options,
       settings
     }  = yaml.safeLoad(
-      fs.readFileSync(path.resolve(this._execDir, configPath), 'utf8')
+      fs.readFileSync(path.resolve(this._execDir, manifest), 'utf8')
     );
     this._commands = commands;
     this._options = options;
     this._settings = settings;
-    registerCommands(this._commands, this._yargs, this._settings, this._execDir);
+    registerCommands(this._commands, this._yargs, this._settings, this._execDir, dependencies);
     registerOptions(this._options, this._yargs, this._settings);
     this._yargs.argv;
   }
