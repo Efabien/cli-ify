@@ -1,4 +1,4 @@
-module.exports = (args, utils) => {
-  console.log('from test2')
-  utils.logger.info(args)
+module.exports = (args, { logger }) => {
+  logger.info('from test2')
+  logger.info(args)
 };

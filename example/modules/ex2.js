@@ -1,4 +1,4 @@
-module.exports = (args, utils, inputs) => {
-  console.log(args);
-  utils.logger.data(inputs)
+module.exports = (args, { logger, spinnerFactory, dependencies }, inputs) => {
+  logger.info(args);
+  logger.data(inputs)
 };

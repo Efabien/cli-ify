@@ -1,7 +1,8 @@
-const func = (arg, utils) => {
-  const spinner = utils.spinnerFactory.create('wait');
+const func = (arg, { logger, spinnerFactory, dependencies }) => {
+  dependencies.log('foo', logger)
+  const spinner = spinnerFactory.create('wait');
   spinner.start();
-  utils.logger.data(arg);
+  logger.data(arg);
   spinner.succeed();
 };
 

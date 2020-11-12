@@ -1,4 +1,4 @@
-module.exports = (arg, utils) => {
-  utils.logger.info('from test1');
-  utils.logger.data(arg)
+module.exports = (arg, { logger }) => {
+  logger.info('from test1');
+  logger.data(arg)
 };

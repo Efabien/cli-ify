@@ -2,4 +2,15 @@ const CliIfy = require('../index.js');
 
 const cliIfy = new CliIfy();
 
-cliIfy.init('./cli-ify.yml');
+const log = (input, logger) => {
+  logger.info(input)
+};
+
+cliIfy.init(
+  {
+    manifest: './cli-ify.yml',
+    dependencies: {
+      log
+    }
+  }
+);
