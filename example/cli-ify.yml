@@ -14,7 +14,7 @@ settings:
     debug: blue
     error: red
 commands:
-  ex1:
+  - ex1:
       describe: An example of command with an argument myArgv
       module: ./modules/ex1.js
   - ex2:
@@ -22,7 +22,7 @@ commands:
       module: ./modules/ex2.js
       prompts:
         - email:
-            description: What is your email ?
+            description: What is your email
         - userName:
             description: What is your user name ?
   - ex3:
