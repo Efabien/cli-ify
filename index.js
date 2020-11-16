@@ -1,5 +1,5 @@
 const yaml = require('js-yaml');
-const fs   = require('fs');
+const fs = require('fs');
 const path = require('path');
 const colors = require('colors');
 
@@ -8,7 +8,7 @@ const callsite = require('callsite');
 const Joi = require('joi');
 
 const {
-  registerCommands, 
+  registerCommands,
   registerOptions
 } = require('./lib/init-yargs');
 
@@ -20,7 +20,6 @@ const {
 
 class CliIfy {
   constructor(configPath) {
-
     this._commands;
     this._options;
     this._settings;
@@ -39,7 +38,7 @@ class CliIfy {
         commands,
         options,
         settings
-      }  = this._loadConfig(execDir, manifest);
+      } = this._loadConfig(execDir, manifest);
       this._commands = commands;
       this._options = options;
       this._settings = settings;
@@ -54,7 +53,7 @@ class CliIfy {
       if (e.name && e.name === 'ManifestException') {
         return console.log(colors.red(e));
       }
-      return console.log(e)
+      return console.log(e);
     }
   }
 

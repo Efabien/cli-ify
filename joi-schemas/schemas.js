@@ -1,3 +1,4 @@
+/* eslint-disable  no-useless-computed-key */
 const Joi = require('joi');
 
 const settingsSchema = Joi.object({
