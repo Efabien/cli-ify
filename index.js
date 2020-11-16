@@ -1,6 +1,7 @@
 const yaml = require('js-yaml');
 const fs   = require('fs');
 const path = require('path');
+const colors = require('colors');
 
 const yargs = require('yargs');
 const callsite = require('callsite');
@@ -21,20 +22,26 @@ class CliIfy {
   }
 
   init({ manifest, dependencies }) {
-    this._setExecDir();
-    const {
-      commands,
-      options,
-      settings
-    }  = yaml.safeLoad(
-      fs.readFileSync(path.resolve(this._execDir, manifest), 'utf8')
-    );
-    this._commands = commands;
-    this._options = options;
-    this._settings = settings;
-    registerCommands(this._commands, this._yargs, this._settings, this._execDir, dependencies);
-    registerOptions(this._options, this._yargs, this._settings);
-    this._yargs.argv;
+    try {
+      this._setExecDir();
+      const {
+        commands,
+        options,
+        settings
+      }  = yaml.safeLoad(
+        fs.readFileSync(path.resolve(this._execDir, manifest), 'utf8')
+      );
+      this._commands = commands;
+      this._options = options;
+      this._settings = settings;
+      registerCommands(this._commands, this._yargs, this._settings, this._execDir, dependencies);
+      registerOptions(this._options, this._yargs, this._settings);
+      this._yargs.argv;
+    } catch (e) {
+      if (e.name && e.name === 'YAMLException') {
+        return console.log(colors.red(`YAMLException : ${e.message}`));
+      }
+    }
   }
 
   _setExecDir() {
