@@ -3,7 +3,7 @@ const CliIfy = require('../index.js');
 const cliIfy = new CliIfy();
 
 const log = (input, logger) => {
-  logger.info(input);
+  logger.warn(input);
 };
 
 cliIfy.init(
