@@ -33,7 +33,8 @@ const subCommands = Joi.array().items(
 const prompts = Joi.array().items(Joi.object().pattern(
   /^/,
   Joi.object({
-    description: Joi.string().required()
+    description: Joi.string().required(),
+    flag: Joi.string().required()
   }).required()
 ).required()).optional();
 
