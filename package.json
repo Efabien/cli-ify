@@ -1,6 +1,6 @@
 {
   "name": "cli-ify",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A framework for building cli with node.js",
   "main": "app.js",
   "scripts": {
