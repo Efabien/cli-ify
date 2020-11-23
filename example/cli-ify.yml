@@ -43,8 +43,3 @@ commands:
         - test2:
             describe: Run on test2
             sub-module: sub-test2.js
-options:
-  - verbose:
-      alias: v
-      type: boolean
-      description: show details
