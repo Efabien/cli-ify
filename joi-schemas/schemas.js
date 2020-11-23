@@ -38,18 +38,6 @@ const prompts = Joi.array().items(Joi.object().pattern(
   }).required()
 ).required()).optional();
 
-const commandsSchema = Joi.array().items(Joi.object().pattern(
-  /^/,
-  Joi.object({
-    describe: Joi.string().required(),
-    module: Joi.string().required(),
-    ['sub-commands']: subCommands,
-    prompts,
-    argv: Joi.string().optional()
-  }).required()
-  ).required())
-.required();
-
 const optionsSchema = Joi.array().items(Joi.object().pattern(
   /^/,
   Joi.object({
@@ -58,6 +46,19 @@ const optionsSchema = Joi.array().items(Joi.object().pattern(
     description: Joi.string().required()
   }).required()
 ).required()).optional();
+
+const commandsSchema = Joi.array().items(Joi.object().pattern(
+  /^/,
+  Joi.object({
+    describe: Joi.string().required(),
+    module: Joi.string().required(),
+    ['sub-commands']: subCommands,
+    prompts,
+    argv: Joi.string().optional(),
+    options: optionsSchema
+  }).required()
+  ).required())
+.required();
 
 module.exports = {
   settingsSchema,

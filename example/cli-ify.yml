@@ -17,6 +17,11 @@ commands:
   - ex1:
       describe: An example of command with an argument myArgv
       module: ./modules/ex1.js
+      options:
+        - test:
+            alias: t
+            type: boolean
+            description: a test option
   - ex2:
       describe: An example of task with interaction
       module: ./modules/ex2.js
