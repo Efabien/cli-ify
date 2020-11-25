@@ -24,7 +24,7 @@ const subCommands = Joi.array().items(
   Joi.object().pattern(
     /^/,
     Joi.object({
-      decription: Joi.string().required(),
+      description: Joi.string().required(),
       ['sub-module']: Joi.string().required()
     }).required()
   ).required()
@@ -61,7 +61,7 @@ const optionsSchema = Joi.array().items(Joi.object().pattern(
 const commandsSchema = Joi.array().items(Joi.object().pattern(
   /^/,
   Joi.object({
-    decription: Joi.string().required(),
+    description: Joi.string().required(),
     module: Joi.string().required(),
     ['sub-commands']: subCommands,
     prompts,
