@@ -15,15 +15,21 @@ settings:
     error: red
 commands:
   - ex1:
-      describe: An example of command with an argument myArgv
+      decription: An example of command with an argument myArgv
       module: ./modules/ex1.js
       options:
         - test:
             alias: t
             type: boolean
             description: a test option
+            demandOption: true
+        - foo:
+            alias: f
+            type: string
+            description: another option with a default value
+            default: bar
   - ex2:
-      describe: An example of task with interaction
+      decription: An example of task with interaction
       module: ./modules/ex2.js
       prompts:
         - email:
@@ -33,13 +39,13 @@ commands:
             description: What is your user name ?
             flag: u
   - ex3:
-      describe: An example with sub-commands
+      decription: An example with sub-commands
       module: ./modules/sub
       argv: sub-cmd
       sub-commands:
         - test1:
-            describe: Run on test1
+            decription: Run on test1
             sub-module: sub-test1.js
         - test2:
-            describe: Run on test2
+            decription: Run on test2
             sub-module: sub-test2.js
