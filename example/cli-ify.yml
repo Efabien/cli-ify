@@ -38,6 +38,11 @@ commands:
         - userName:
             description: What is your user name ?
             flag: u
+      options:
+        - test:
+            alias: t
+            type: boolean
+            description: a test option
   - ex3:
       description: An example with sub-commands
       module: ./modules/sub
