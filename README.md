@@ -72,4 +72,7 @@ module.exports = func;
 ### Examples
 For a more practical approach, please refer to the [examples](https://github.com/Efabien/cli-ify/tree/master/example)
 
+### Projects using cli-ify
+
+- [jira-cli](https://github.com/Efabien/jira-cli)
 
