@@ -58,7 +58,7 @@ The second argument is an object containing utilities like looger, spinnerFactor
 Here is what a module could look like:
 
 ```js
-const func = async (arg, { logger, spinnerFactory, dependencies }) => {
+module.exports = async(arg, { logger, spinnerFactory, dependencies }) => {
   const { apiClient } = dependencies;
   const spinner = spinnerFactory.create('Loading data ...');
   spinner.start();
@@ -67,7 +67,6 @@ const func = async (arg, { logger, spinnerFactory, dependencies }) => {
   spinner.succeed();
 };
 
-module.exports = func;
 ```
 ### Examples
 For a more practical approach, please refer to the [examples](https://github.com/Efabien/cli-ify/tree/master/example)
