@@ -1,4 +1,5 @@
 settings:
+  invocation: 'cli-ify'
   interactivity:
     label: ' '
     delimiter: ' '
@@ -14,7 +15,7 @@ settings:
     debug: blue
     error: red
 commands:
-  - exemple:
+  - list:
       description: An example of command with an argument myArgv
       module: ./modules/ex1.js
       options:
@@ -28,7 +29,7 @@ commands:
             type: string
             description: another option with a default value
             default: bar
-  - ex2:
+  - validate:
       description: An example of task with interaction
       module: ./modules/ex2.js
       prompts:
@@ -43,14 +44,14 @@ commands:
             alias: t
             type: boolean
             description: a test option
-  - ex3:
+  - entity:
       description: An example with sub-commands
       module: ./modules/sub
       argv: sub-cmd
       sub-commands:
-        - testify:
+        - detail:
             description: Run on test1
             sub-module: sub-test1.js
-        - test2:
+        - update:
             description: Run on test2
             sub-module: sub-test2.js

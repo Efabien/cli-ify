@@ -2,6 +2,7 @@
 const Joi = require('joi');
 
 const settingsSchema = Joi.object({
+  invocation: Joi.string().required(),
   interactivity: Joi.object({
     label: Joi.string().required(),
     delimiter: Joi.string().required()
