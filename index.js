@@ -9,7 +9,9 @@ const Joi = require('joi');
 
 const {
   registerCommands,
-  registerOptions
+  registerOptions,
+  registerAutocomplete
+
 } = require('./lib/init-yargs');
 
 const {
@@ -44,6 +46,7 @@ class CliIfy {
       this._settings = settings;
       registerCommands(this._commands, this._yargs, this._settings, execDir, dependencies);
       registerOptions(this._options, this._yargs, this._settings);
+      registerAutocomplete(this._commands, this._settings);
       this._yargs.argv;
     } catch (e) {
       if (e.name && e.name === 'YAMLException') {

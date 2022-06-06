@@ -14,7 +14,7 @@ settings:
     debug: blue
     error: red
 commands:
-  - ex1:
+  - exemple:
       description: An example of command with an argument myArgv
       module: ./modules/ex1.js
       options:
@@ -48,7 +48,7 @@ commands:
       module: ./modules/sub
       argv: sub-cmd
       sub-commands:
-        - test1:
+        - testify:
             description: Run on test1
             sub-module: sub-test1.js
         - test2:

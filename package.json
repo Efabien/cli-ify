@@ -4,7 +4,8 @@
   "description": "A framework for building cli with node.js",
   "main": "app.js",
   "scripts": {
-    "test": "node ./node_modules/gulp/bin/gulp pre-commit"
+    "test": "node ./node_modules/gulp/bin/gulp pre-commit",
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "joi": "^17.3.0",
     "js-yaml": "^3.14.0",
     "lodash": "^4.17.20",
+    "omelette": "^0.4.17",
     "ora": "^5.1.0",
     "prompt": "^1.0.0",
     "yargs": "^16.0.3"
@@ -40,5 +42,8 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "guppy-pre-commit": "^0.4.0"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.9"
   }
 }
